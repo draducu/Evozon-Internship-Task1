@@ -11,11 +11,11 @@ let key;
 let validCheck = false
 let multiply;
 
-function assignmentAndCheck() {
+function assignmentAndCheck() {                                                         // initializare a variabilelor principale
     message = messageInput.value
     key = keyInput.value
 
-    if(message && key) {
+    if(message && key) {                                                                // verificare validitatii datelor, era mai elegant cu try si catch
         validCheck = true
     }
     else {
@@ -24,8 +24,7 @@ function assignmentAndCheck() {
 }
 
 function extendKey() {
-    // first I extend
-    let j;
+    let j;                                                                              // first I extend
 
     if(message.length % key.length === 0) {
         multiply = (message.length/key.length)
@@ -45,7 +44,7 @@ function extendKey() {
 
     // now I cut 
     while(key.length > message.length) {
-        key = key.slice(0, key.length-1)  // taie pana inainte de key.length-1 !!!!
+        key = key.slice(0, key.length-1)                                                // taie pana inainte de key.length-1 !!!!
         console.log('repet')
         console.log(key, 'cutting....')
     }
@@ -53,14 +52,14 @@ function extendKey() {
 
 function reduceKey() {
     while(key.length > message.length) {
-        key = key.slice(0, key.length-1)  // taie pana inainte de key.length-1 !!!!
+        key = key.slice(0, key.length-1)                                                // taie pana inainte de key.length-1 !!!!
         console.log('repeta')
         console.log(key, 'cutting')
     }
     console.log(key)
 }
 
-function makeKeyEqualToMessage() {
+function makeKeyEqualToMessage() {                                                      // modificam cheia
     if (message.length > key.length) {
         console.log('The input is bigger')
         extendKey()
