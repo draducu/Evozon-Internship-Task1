@@ -42,7 +42,6 @@ function extendKey() {
         console.log('alo')
     }
 
-    // now I cut 
     while(key.length > message.length) {
         key = key.slice(0, key.length-1)                                                // taie pana inainte de key.length-1 !!!!
         console.log('repet')
@@ -77,7 +76,8 @@ function encryptMessage() {                                                     
     assignmentAndCheck()
     if (validCheck === false) {
         alert('Invalid input, you need a message and a key ! Thank you !')
-        return console.log("Invalid input, sorry")
+        console.log("Invalid input, sorry")
+        return 
     }
     console.log('Valid input, code goes forward!')
     makeKeyEqualToMessage()
